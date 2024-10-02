@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tribute to Sundar Pichai</title>
+</head>
+<body>
+    <div class="container">
+        <h2> Tribute Page</h2><br>
+        <header>
+            <img src="https://theteenagertoday.com/wp/wp-content/uploads/2022/01/sundar-pichai-google.jpg" alt="Sundar Pichai" class="profile-img">
+            <h1>Sundar Pichai</h1>
+            <p>CEO of Alphabet Inc. and Google</p>
+            <p class="about">Sundar Pichai is the CEO of Alphabet Inc. and Google, Pichai joined Google in 2004, initially working on the Google Toolbar and later leading the development of Google Chrome, which has become one of the world's most popular web browsers. Under his leadership, Google has expanded its services and innovations in artificial intelligence, cloud computing, and hardware.</p>
+        </header>
+
+        <br><br>
+        <nav>
+            <ul>
+                <li><a href="#life-journey" onclick="showSection('life-journey')">Life Journey</a></li>
+                <li><a href="#services" onclick="showSection('services')">Services</a></li>
+                <li><a href="#Acheivements" onclick="showSection('Acheivements')">Acheivements</a></li>
+                <li><a href="#tributes" onclick="showSection('tributes')">Tributes</a></li>
+                
+            </ul>
+        </nav>
+
+        <section id="content">
+            <div id="services" class="info-section">
+                <h2>Services</h2>
+                <p>Sundar Pichai has played a pivotal role in leading Google through a transformative period, overseeing product development and innovation in key areas such as:</p>
+                <ul>
+                    <li>Google Chrome</li>
+                    <li>Google Drive</li>
+                    <li>Google Assistant</li>
+                    <li>Artificial Intelligence and Machine Learning initiatives</li>
+                </ul>
+            </div>
+
+            <div id="tributes" class="info-section" style="display:none;">
+                <h2>Tributes</h2>
+                <p>Sundar Pichai is widely admired for his leadership style and dedication to innovation. He has received numerous accolades, including:</p>
+                <ul>
+                    <li>Fortune's World's Greatest Leaders</li>
+                    <li>TIME's 100 Most Influential People</li>
+                    <li>Global Indian of the Year by the Economic Times</li>
+                </ul>
+            </div>
+
+            <div id="life-journey" class="info-section" style="display:none;">
+                <h2>Life Journey</h2>
+                <p>Sundar Pichai's journey began in Madurai, India. His academic excellence led him to IIT Kharagpur, where he earned his degree. He later moved to the US for further studies, eventually joining Google in 2004.</p>
+                <p>He rapidly ascended the ranks, taking on major projects, including the development of Google Chrome. His vision and leadership led to his appointment as CEO in 2015, making him a prominent figure in the tech industry.</p>
+            </div>
+
+            <div id="Acheivements" class="info-section" style="display:none;">
+                <h2>Acheivements</h2>
+                <ul>
+                    <li><strong>Expansion of Google Services:</strong> Pichai has overseen the expansion of various Google services, including Google Drive, Google Cloud, and Android, which have significantly increased the company’s market share and user engagement.</li>
+                    <li><strong>Global Expansion:</strong> He has been instrumental in the company’s global expansion efforts, focusing on increasing internet accessibility through initiatives like Project Loon, which aimed to provide internet access in remote areas using high-altitude balloons.</li>
+                    <li><strong>Recognition and Awards:</strong> Pichai has been recognized multiple times for his leadership and influence in the tech industry, including being named one of Fortune's "World's Greatest Leaders" and appearing on TIME's list of the "100 Most Influential People in the World."</li>
+                </ul>
+            </div>
+            
+        </section>
+
+        <footer>
+            <p>Thank you for visiting this tribute page to Sundar Pichai!</p>
+        </footer>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.info-section');
+            sections.forEach(section => {
+                section.style.display = 'none'; // Hide all sections
+            });
+            document.getElementById(sectionId).style.display = 'block'; // Show the selected section
+        }
+    </script>
+</body>
+</html>

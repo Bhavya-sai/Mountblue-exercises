@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Survey Form</h1>
+        <form action="/submit" method="POST">
+            <!-- Text Input -->
+            <fieldset>
+                <legend>"Let us know how can we improve our Service." </legend>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name"  required> <br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="99" placeholder="Enter" required><br>
+
+                <!-- Radio Buttons -->
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label><br>
+                <br>
+
+
+                <!-- Dropdown (Select) -->
+                <label for="education">Will you recommend this Service for others</label>
+                <select id="education" name="education">
+                    <option value="highschool">Definetly</option>
+                    <option value="bachelors">May be</option>
+                    <option value="masters">Not Sure</option>
+                </select>
+                <br>
+                <!-- Text Area -->
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Write your feedback here..."></textarea> <br>
+                <br>
+
+                <!-- Checkbox -->
+                <label>What Services you are more interested in? (Select all that apply):</label><br>
+                <input type="checkbox" id="technology" name="interest" value="technology">
+                <label for="technology">Software Service</label><br>
+                <input type="checkbox" id="science" name="interest" value="science">
+                <label for="science">Billing Service</label><br>
+                <input type="checkbox" id="art" name="interest" value="art">
+                <label for="art">Delivery Service</label><br>
+                <input type="checkbox" id="sports" name="interest" value="sports">
+                <label for="sports">Marketing Service</label><br>
+                <br><br>
+
+                <!-- File Upload -->
+                <label for="fileUpload">Upload Supporting Documents:</label>
+                <input type="file" id="fileUpload" name="fileUpload"><br>
+                <br>
+
+                <!-- Datalist for Autocomplete -->
+                <label for="browser">Favorite Web Browser:</label>
+                <input list="browsers" id="browser" name="browser">
+                <datalist id="browsers">
+                <option value="Google Chrome">
+                <option value="Mozilla Firefox">
+                <option value="Microsoft Edge">
+                <option value="Safari">
+                <option value="Opera">
+               </datalist><br>
+
+                <div class="star-rating" id="star-rating">
+                    <h4>OverAll Experience With Us</h4>
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div><br>
+                <br>
+                <p id="rating-output"></p>
+
+                <div class="button-container">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
